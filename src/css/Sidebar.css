@@ -1,0 +1,412 @@
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 245px;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 18px 20px;
+
+  box-sizing: border-box;
+
+  background: #e4c1f9;
+
+  color: #3c096c;
+
+  border-right: 1px solid rgba(63, 49, 112, 0.16);
+
+  box-shadow:
+    6px 0 22px rgba(31, 22, 70, 0.14);
+
+  z-index: 1000;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.sidebar-logo {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px 10px 10px;
+
+  box-sizing: border-box;
+}
+
+.sidebar-logo img {
+  width: 135px;
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: 22px;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.sidebar-section-title {
+  margin: 12px 10px 5px;
+
+  color: #3c096c;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.sidebar-link {
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0 14px;
+
+  border-radius: 12px;
+
+  color: #3c096c;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================
+   LINK ICONS
+========================= */
+
+.sidebar-link svg {
+  width: 19px;
+  height: 19px;
+
+  flex-shrink: 0;
+
+  color: #3c096c;
+
+  transition: color 0.25s ease;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.sidebar-link:hover {
+  background: #d3a9ef;
+
+  color: #3c096c;
+
+  transform: translateX(2px);
+}
+
+.sidebar-link:hover svg {
+  color: #3c096c;
+}
+
+
+/* =========================
+   ACTIVE
+========================= */
+
+.sidebar-link.active {
+  background: #3c096c;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 6px 16px rgba(60, 9, 108, 0.25);
+}
+
+.sidebar-link.active svg {
+  color: #ffffff;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.settings-link {
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   USER
+========================= */
+
+.sidebar-user {
+  border-top: 1px solid rgba(60, 9, 108, 0.18);
+
+  padding: 18px 12px 4px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+
+/* =========================
+   USER ICON
+========================= */
+
+.sidebar-user-icon {
+  width: 39px;
+  height: 39px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #c99be8;
+
+  color: #3c096c;
+
+  flex-shrink: 0;
+
+  box-shadow:
+    0 4px 10px rgba(60, 9, 108, 0.14);
+}
+
+.sidebar-user-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* =========================
+   USER TEXT
+========================= */
+
+.sidebar-user-info {
+  min-width: 0;
+}
+
+.sidebar-user-info strong {
+  display: block;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  color: #3c096c;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================
+   TOGGLE BUTTON
+========================= */
+
+.sidebar-toggle {
+  position: fixed;
+
+  top: 22px;
+  left: 18px;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid rgba(60, 9, 108, 0.14);
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #d3a9ef;
+
+  color: #3c096c;
+
+  cursor: pointer;
+
+  z-index: 1100;
+
+  font-size: 20px;
+
+  box-shadow:
+    0 5px 14px rgba(31, 22, 70, 0.14);
+
+  transition:
+    left 0.3s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================
+   TOGGLE HOVER
+========================= */
+
+.sidebar-toggle:hover {
+  background: #c99be8;
+
+  color: #3c096c;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   BUTTON WHEN SIDEBAR OPEN
+========================= */
+
+.sidebar-toggle-open {
+  left: 215px;
+}
+
+
+/* =========================
+   DESKTOP - SIDEBAR CLOSED
+========================= */
+
+.sidebar-closed {
+  transform: translateX(-100%);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .sidebar {
+    width: 245px;
+    height: 100vh;
+
+    padding: 24px 18px 20px;
+
+    transform: translateX(0);
+
+    box-shadow:
+      8px 0 25px rgba(31, 22, 70, 0.20);
+  }
+
+
+  .sidebar-closed {
+    transform: translateX(-100%);
+  }
+
+
+  /* Logo */
+
+  .sidebar-logo {
+    padding-top: 4px;
+  }
+
+
+  /* Menu */
+
+  .sidebar-menu {
+    margin-top: 22px;
+  }
+
+
+  /* Links */
+
+  .sidebar-link {
+    height: 46px;
+
+    justify-content: flex-start;
+
+    padding: 0 14px;
+  }
+
+
+  .sidebar-link span {
+    display: block;
+  }
+
+
+  /* User */
+
+  .sidebar-user {
+    justify-content: flex-start;
+
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .sidebar-user-info {
+    display: block;
+  }
+
+
+  /* Toggle */
+
+  .sidebar-toggle {
+    top: 18px;
+    left: 18px;
+
+    width: 30px;
+    height: 38px;
+  }
+
+
+  .sidebar-toggle-open {
+    left: 210px;
+  }
+}

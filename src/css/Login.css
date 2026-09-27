@@ -1,0 +1,671 @@
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(145, 185, 255, 0.35),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 88% 85%,
+      rgba(105, 190, 255, 0.25),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f3f7ff 0%,
+      #e9f1ff 48%,
+      #e1efff 100%
+    );
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   BACKGROUND CIRCLES
+========================================= */
+
+.login-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.login-circle-one {
+  width: 300px;
+  height: 300px;
+
+  top: -130px;
+  left: -120px;
+
+  background: rgba(107, 164, 245, 0.16);
+
+  filter: blur(2px);
+}
+
+.login-circle-two {
+  width: 260px;
+  height: 260px;
+
+  right: -90px;
+  top: 110px;
+
+  border: 1px solid rgba(75, 145, 235, 0.16);
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.login-circle-three {
+  width: 430px;
+  height: 430px;
+
+  bottom: -300px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border: 1px solid rgba(75, 145, 235, 0.14);
+}
+
+
+/* =========================================
+   DOT PATTERNS
+========================================= */
+
+.login-dots {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  opacity: 0.42;
+
+  background-image: radial-gradient(
+    #579dff 1.5px,
+    transparent 1.5px
+  );
+
+  background-size: 16px 16px;
+
+  pointer-events: none;
+}
+
+.login-dots-one {
+  top: 120px;
+  left: 165px;
+}
+
+.login-dots-two {
+  bottom: 70px;
+  left: 250px;
+}
+
+
+/* =========================================
+   FLOATING DOTS
+========================================= */
+
+.login-floating-dot {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: #4d9cff;
+
+  box-shadow:
+    0 5px 18px rgba(55, 135, 235, 0.28);
+
+  pointer-events: none;
+}
+
+.login-dot-one {
+  top: 170px;
+  left: 350px;
+}
+
+.login-dot-two {
+  bottom: 135px;
+  left: 290px;
+}
+
+
+/* =========================================
+   LOGIN CARD
+   SAME VIBE AS REGISTER
+========================================= */
+
+.login-card {
+  width: 430px;
+
+  padding: 38px 38px 34px;
+
+  border-radius: 28px;
+
+  position: relative;
+  z-index: 10;
+
+  background:
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(255, 255, 255, 0.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #292746 0%,
+      #252342 50%,
+      #211f3d 100%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.20);
+
+  box-shadow:
+    0 30px 65px rgba(38, 45, 85, 0.28),
+    0 12px 30px rgba(38, 45, 85, 0.16);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.login-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.login-logo {
+  width: 145px;
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  filter:
+    brightness(1.08)
+    saturate(1.08);
+}
+
+
+/* =========================================
+   WORKSPACE BADGE
+========================================= */
+
+.login-workspace-badge {
+  padding: 9px 14px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  border: 1px solid rgba(255, 255, 255, 0.20);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.10);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.login-heading {
+  margin-bottom: 28px;
+}
+
+.login-heading h1 {
+  margin: 0 0 8px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  letter-spacing: -0.5px;
+}
+
+.login-heading p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #d8e0f0;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   INPUT GROUP
+========================================= */
+
+.login-input-group {
+  width: 100%;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 16px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f1f5fb 100%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 5px 15px rgba(20, 45, 85, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   INPUT HOVER
+========================================= */
+
+.login-input-group:hover {
+  border-color: rgba(90, 160, 245, 0.55);
+
+  box-shadow:
+    0 7px 18px rgba(30, 75, 130, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+
+/* =========================================
+   INPUT FOCUS
+   NO BLINK
+========================================= */
+
+.login-input-group:focus-within {
+  border-color: #65aaff;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 2px rgba(80, 155, 255, 0.12),
+    0 7px 18px rgba(40, 100, 180, 0.10);
+}
+
+
+/* =========================================
+   INPUT ICON
+========================================= */
+
+.login-input-icon {
+  margin-left: 17px;
+
+  font-size: 15px;
+
+  color: #4e91ed;
+
+  flex-shrink: 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.login-input-group input {
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+
+  padding: 0 16px;
+
+  border: 0 !important;
+  outline: 0 !important;
+
+  background: transparent !important;
+
+  color: #1d3155;
+
+  font-size: 14px;
+
+  font-family: inherit;
+
+  box-sizing: border-box;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  box-shadow: none !important;
+}
+
+
+/* =========================================
+   INPUT FOCUS — REMOVE BLINK
+========================================= */
+
+.login-input-group input:focus,
+.login-input-group input:focus-visible {
+  outline: none !important;
+
+  border: none !important;
+
+  box-shadow: none !important;
+
+  background: transparent !important;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.login-input-group input::placeholder {
+  color: #7183a0;
+
+  opacity: 1;
+}
+
+
+/* =========================================
+   CHROME AUTOFILL
+========================================= */
+
+.login-input-group input:-webkit-autofill,
+.login-input-group input:-webkit-autofill:hover,
+.login-input-group input:-webkit-autofill:focus,
+.login-input-group input:-webkit-autofill:active {
+
+  -webkit-text-fill-color: #1d3155 !important;
+
+  -webkit-box-shadow:
+    0 0 0 1000px #f1f5fb inset !important;
+
+  box-shadow:
+    0 0 0 1000px #f1f5fb inset !important;
+
+  border: none !important;
+
+  outline: none !important;
+
+  transition:
+    background-color 9999s ease-in-out 0s;
+}
+
+
+/* =========================================
+   PASSWORD EYE
+========================================= */
+
+.login-password-eye {
+  width: 44px;
+  height: 54px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border: none !important;
+  outline: none !important;
+
+  background: transparent !important;
+
+  color: #7183a0;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.login-password-eye:hover {
+  color: #4e91ed;
+
+  background: transparent !important;
+}
+
+.login-password-eye:focus,
+.login-password-eye:focus-visible,
+.login-password-eye:active {
+  border: none !important;
+
+  outline: none !important;
+
+  background: transparent !important;
+
+  box-shadow: none !important;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-button {
+  width: 100%;
+  height: 56px;
+
+  margin-top: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2588ff 0%,
+      #24a8f5 100%
+    );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 25px rgba(38, 137, 255, 0.28);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 30px rgba(38, 137, 255, 0.35);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.login-message {
+  margin: 15px 0 0;
+
+  text-align: center;
+
+  font-size: 13px;
+
+  color: #dcecff;
+}
+
+
+/* =========================================
+   REGISTER LINK
+========================================= */
+
+.register-link {
+  margin-top: 24px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 13px;
+
+  color: #d5e1f4;
+}
+
+.register-link a {
+  color: #8ec5ff;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.register-link a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .login-page {
+    padding: 25px 18px;
+
+    box-sizing: border-box;
+  }
+
+  .login-card {
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 30px 24px;
+  }
+
+  .login-card-top {
+    margin-bottom: 24px;
+  }
+
+  .login-logo {
+    width: 125px;
+  }
+
+  .login-workspace-badge {
+    font-size: 10px;
+
+    padding: 8px 10px;
+  }
+
+  .login-heading h1 {
+    font-size: 27px;
+  }
+
+  .login-circle-one {
+    width: 220px;
+    height: 220px;
+  }
+
+  .login-circle-two {
+    width: 180px;
+    height: 180px;
+  }
+
+  .login-dots-one {
+    left: 20px;
+  }
+
+  .login-dots-two {
+    left: 30px;
+  }
+}
+
+/* =========================================
+   BUTTON CLICK FIX
+========================================= */
+
+.login-button {
+  position: relative;
+  z-index: 50;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+.login-button span,
+.login-button svg {
+  pointer-events: none;
+}
