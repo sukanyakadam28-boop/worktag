@@ -7,29 +7,14 @@ import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
-    <BrowserRouter>
-
+    <BrowserRouter basename="/worktag">
       <Routes>
-
+        <Route path="/" element={<Landing />} />
         <Route path="/Landing" element={<Landing />} />
-        
-        <Route
-          path="/login"
-          element={<Login />}
-        />
-
-        <Route
-          path="/register"
-          element={<Register />}
-        />
-
-        <Route
-          path="/dashboard"
-          element={<Dashboard />}
-        />
-
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-
     </BrowserRouter>
   );
 }
